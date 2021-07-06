@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         editText = findViewById(R.id.editText);
     }
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +38,24 @@ public class MainActivity extends AppCompatActivity {
 
         button.setOnClickListener(v -> {
             url = editText.getText().toString();
-            Intent intent = new Intent(MainActivity.this, ForecastActivity.class);
-            intent.putExtra("city", url);
-            startActivity(intent);
-
+            if(!url.equals("")){
+                Intent intent = new Intent(MainActivity.this, ForecastActivity.class);
+                intent.putExtra("city", url);
+                startActivity(intent);
+            }
+            else{
+                Toast.makeText(MainActivity.this, "Field is empty\nPlease enter a name", Toast.LENGTH_LONG).show();
+            }
 
         });
 
 
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        textView.setText(R.string.serarch_city);
     }
 }

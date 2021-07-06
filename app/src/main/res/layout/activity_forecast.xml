@@ -8,16 +8,19 @@
 
     <TextView
         android:id="@+id/txtCity"
-        android:layout_width="184dp"
-        android:layout_height="103dp"
-        android:layout_marginLeft="220dp"
-        android:gravity="end"
-        android:text="Forecast for a "
-        android:textAlignment="textEnd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textColor="#4CFA53"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />/   android:textAlignment="textEnd"
         android:textColor="#60f542"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/listView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_goneMarginBottom="200dp" />
 
     <Button
@@ -33,11 +36,11 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="897dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/txtCity">
 
     </ListView>
 </androidx.constraintlayout.widget.ConstraintLayout>

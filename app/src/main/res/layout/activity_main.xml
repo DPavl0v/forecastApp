@@ -13,7 +13,7 @@
         android:layout_marginTop="276dp"
         android:gravity="center_horizontal"
         android:rotationX="0"
-        android:text="Enter your city"
+        android:text="@string/serarch_city"
         android:textAlignment="center"
         android:textColor="#60f542"
         android:textSize="@dimen/fab_margin"
@@ -38,9 +38,12 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show forecast"
+        android:textColor="@color/green"
+        android:textColorHighlight="#FD0000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editText"
         app:layout_constraintHorizontal_bias="1.0"

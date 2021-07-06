@@ -60,6 +60,20 @@ public class ForecastActivity extends AppCompatActivity {
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         RequestQueue requestQueue = Volley.newRequestQueue(ForecastActivity.this);
 
         JsonArrayRequest getIdCityRequest = new JsonArrayRequest(Request.Method.GET, getCityIdUrl + city, null, new Response.Listener<JSONArray>() {
@@ -95,7 +109,7 @@ public class ForecastActivity extends AppCompatActivity {
                                 }
 
                                 listView.setAdapter(arrayAdapter);
-                                textView.append(city + " for a next 6 days");
+                                textView.setText( "Forecast for a " + city + " for a next 6 days");
 
 
                             } catch (JSONException e) {
